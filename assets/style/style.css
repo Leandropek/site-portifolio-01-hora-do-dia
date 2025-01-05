@@ -1,68 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font: normal Arial;
+    font-family: "Roboto", serif;
+    font-size: 16px;
+    color: #000;
 }
 
-body {    
-    background-color: rgba(187, 172, 77, 0.884);
-    width: 100vw;
+body {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-}
-
-main {
-    height: 400px;
-    width: 500px;
-    background-color: white;
-    border-radius: 12px;
-    padding: 12px;
-    box-shadow: 4px 4px 4px 4px rgba(12, 55, 63, 0.466);
-    display: flex;
-    flex-direction: column;
 }
 
 header {
-    color: white;
-    font-size: 20px;
-}
-
-footer {
-    color: white;
-    font-style: italic;
-    font-size: 20px;
-}
-
-section {
+    padding: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.info h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
-section h2 {
-    font-size: 16pt;
-    margin: 10px;
+.info i {
+    padding: .5em;
+    border-radius: 4px;
+    margin-right: 5px;
+    background: #fff;
+    box-shadow: 2px 2px 1px 1px #000000bf;
 }
 
-section img {
-    width: 300px;
-    height: 300px;
-    border-radius: 200px;  
+main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (max-width: 768px) {
-    main {
-        width: 90%;
-        height: auto;
+.titulo-principal {
+    margin-bottom: 20px;
+}
+
+.titulo-principal i {
+    padding: 1em;
+    border-radius: 4px;
+    margin-right: 5px;
+    background: #fff;
+    box-shadow: 2px 2px 1px 1px #000000bf;
+}
+
+.titulo-principal h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px 40px;
+    box-shadow: 2px 2px 1px 1px #000000bf;
+}
+
+.container h2 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+img {
+    height: 20em;
+    width: 20em;
+    border-radius: 50%; 
+}
+
+footer {
+    margin-top: 20px;
+    font-style: italic;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    img {
+        height: 15em;
+        width: 15em; 
     }
 
-    section img {
-        width: 200px;
-        height: 200px;
+    header {
+        justify-content: center;
     }
-}
+
+    .titulo-principal {
+        margin-bottom: 10px;
+    }
+} 
+
+@media (max-width: 440px) {
+    img {
+        height: 10em;
+        width: 10em; 
+    }
+} 
