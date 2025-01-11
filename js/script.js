@@ -1,6 +1,16 @@
 function obterDataAtual() {
     const data = new Date();
 
+    let periodoDoDia;
+    const hora = data.getHours();
+    if (hora >= 6 && hora < 12) {
+        periodoDoDia = "Manhã"
+    } else if (hora >= 12 && hora < 18) {
+        periodoDoDia = "Tarde"
+    } else {
+        periodoDoDia = "Noite"
+    }
+
     const diasDaSemana = [
         "Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
 
@@ -14,18 +24,14 @@ function obterDataAtual() {
     const mes = meses[data.getMonth()];
     const ano = data.getFullYear();
 
-    return `${semana}, ${dia} de ${mes} de ${ano}.`;
+    return `${periodoDoDia} de ${semana}, ${dia} de ${mes} de ${ano}.`;
 }
 
-
-// Inserindo a data atual no HTML
 document.addEventListener("DOMContentLoaded", () => {
     const elementoTexto = document.querySelector(".info-texto");
     if (elementoTexto) {
         elementoTexto.innerText = obterDataAtual();
     }
-
-
 });
 
 
@@ -36,7 +42,7 @@ const titulo = document.querySelector(".hora");
 const imagem = document.querySelector(".img");
 
 function atualizar() {
-    const data = new Date(); // Obtém a data e hora atuais
+    const data = new Date();
     const hora = String(data.getHours()).padStart(2, '0');
     const minutos = String(data.getMinutes()).padStart(2, '0');
     const segundos = String(data.getSeconds()).padStart(2, '0');
@@ -58,6 +64,5 @@ function atualizar() {
     }
 }
 
-setInterval(atualizar, 1000);
-
 atualizar();
+setInterval(atualizar, 1000);
