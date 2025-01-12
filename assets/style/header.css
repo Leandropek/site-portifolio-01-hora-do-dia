@@ -1,0 +1,42 @@
+
+
+.cabecalho{
+    background-image: url("../img/relogio-1.webp");
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    align-items: center;
+}
+
+.texto__cabecalho {
+    padding-left: 5em;
+}
+
+
+
+.texto__cabecalho h1 {
+    color: #F8FCFD;
+    font-family: "Roboto", serif;
+    font-size: 5em;
+    font-size: 900;
+}
+
+.texto__cabecalho p {
+    color: #ffffff;
+    font-family: "Roboto", serif;
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+.texto__cabecalho a {
+    display: inline-block;
+    color: #ffffff;
+    background: #000;
+    font-family: "Roboto", serif;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 1em;
+    border-radius: 8px;
+}
+

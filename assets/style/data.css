@@ -1,0 +1,16 @@
+.info-titulo {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ri-calendar-2-line {
+    padding: .5em;
+    border-radius: 4px;
+    margin-right: 5px;
+    background: #fff;
+    box-shadow: 2px 2px 1px 1px #000000bf;
+}

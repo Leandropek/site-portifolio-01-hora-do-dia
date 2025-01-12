@@ -35,11 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
-
-const titulo = document.querySelector(".hora");
-const imagem = document.querySelector(".img");
+const titulo = document.querySelector(".hora-digital");
+const imagem = document.querySelector(".imagem");
 
 function atualizar() {
     const data = new Date();
