@@ -1,42 +1,79 @@
-
-
-.cabecalho{
-    background-image: url("../img/relogio-1.webp");
-    height: 80vh;
+.cabecalho {
+    background-image: url("../img/relogio.webp");
+    padding: 10rem 0;
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
     align-items: center;
+    padding:  10rem 0 ;
+    display: flex;
+    justify-content:flex-start;
 }
 
 .texto__cabecalho {
-    padding-left: 5em;
+    text-align: center;      
 }
 
-
-
 .texto__cabecalho h1 {
-    color: #F8FCFD;
-    font-family: "Roboto", serif;
-    font-size: 5em;
-    font-size: 900;
+    color: #fff;
+    font-family: var(--font-family-titulo);
+    font-size: 7em;
+    font-weight: 900;
+    text-shadow: 10px 10px 2px #000;
 }
 
 .texto__cabecalho p {
-    color: #ffffff;
-    font-family: "Roboto", serif;
-    font-size: 1em;
-    margin: 1em 0;
+    color: #fff;
+    font-family: var(--font-family-texto);    
+    font-size: 1.5em;
+    padding: 1em 0;
+    font-weight: 500;
+    text-shadow: 2px 2px 1px #000;
 }
 
 .texto__cabecalho a {
     display: inline-block;
-    color: #ffffff;
-    background: #000;
-    font-family: "Roboto", serif;
+    color: #fff;
+    background: #c50202;
+    font-family: var(--font-family-texto);
+    font-weight: 600;
     text-decoration: none;
     font-size: 1em;
-    padding: 1em;
-    border-radius: 8px;
+    padding: 1em 2em;
+    border-radius: 8px;    
+    box-shadow: 1px 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px #000;
 }
 
+.texto__cabecalho a:hover {
+    background: #d51d1d;
+    box-shadow: 1px 1px 8px 4px #f79c9c;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+
+    .cabecalho {
+        background-image: url("../img/relogio1.png");
+        background-size: contain;
+        padding:  4rem 50% ;
+        background-attachment: scroll;
+        justify-content: center;
+    }
+
+    .texto__cabecalho h1 {
+        font-size: 4em; 
+        text-shadow: 5px 5px 1px #000;
+        line-height: 1.5em; 
+    }
+
+    .texto__cabecalho p {
+        font-size: 1.2em; 
+        padding: 0.5em 0; 
+    }
+
+    .texto__cabecalho a {
+        font-size: 0.9em; 
+        padding: 0.8em 1.5em; 
+    }
+}

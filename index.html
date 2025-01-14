@@ -12,25 +12,26 @@
         <div class="texto__cabecalho">
             <h1>Relógio interativo</h1>
             <p>Verifique a hora atual sem esforço</p>
-            <a href="#">Ver serviços</a>
+            <a href="#info">Ver serviços</a>
         </div>        
-    </header> 
+    </header>
 
     <main>
-
-        <div class="info">
+        <div class="info" id="info">
             <h2 class="info-titulo"><i class="ri-calendar-2-line"></i>Data:</h2>            
             <p class="info-texto">...</p>
         </div>
 
-        <section class="titulo-principal">
-            <h1 class="titulo"><i class="ri-time-line"></i>Hora do Dia</h1>
-        </section>
+        <section class="section" >
+            <div class="relogio__analogico-texto">
+                <h2><i class="ri-time-line"></i>Relógio Analógico</h2>
+                <p>O relógio analógico é um dispositivo clássico  mostrador circular e ponteiros que se movem em torno de um eixo central. Geralmente, possui três ponteiros principais:</p>
 
-        <section class="relogios">
-            <div class="container-digital">
-                <h2 class="hora-digital">...</h2>
-                <img src="" alt="" class="imagem">
+                <ol>
+                    <li><span>Ponteiro das horas:</span> Mais curto e se move lentamente, completando uma volta a cada 12 horas.</li>
+                    <li><span>Ponteiro dos minutos:</span> Mais longo, completando uma volta a cada 60 minutos.</li>
+                    <li><span>Ponteiro dos segundos:</span> Geralmente mais fino e rápido, completando uma volta a cada 60 segundos.</li>
+                </ol>
             </div>
 
             <div class="container">
@@ -40,14 +41,30 @@
                     <div class="ponteiros minuto"></div>
                     <div class="ponteiros segundo"></div>        
                 </div>
-            </div> 
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="relogio__digital-texto">
+                <h2><i class="ri-hourglass-line"></i>Relógio Digital</h2>
+                <p>O relógio digital é um dispositivo moderno que utiliza números para exibir o horário de forma direta e precisa. Geralmente, possui três caracteristicas principais:</p>
+
+                <ol>
+                    <li><span>Exibição do horário:</span>  Mostra horas, minutos e, muitas vezes, segundos de forma exata, facilitando a leitura rápida.</li>
+                    <li><span>Precisão:</span> Alimentado por baterias e controlado por mecanismos eletrônicos, é conhecido pela alta precisão em comparação aos modelos mecânicos analógicos.</li>
+                    <li><span>Design versátil:</span> Disponível em vários estilos, desde opções esportivas até designs mais sofisticados, adaptando-se a diferentes necessidades e gostos.</li>
+                </ol>
+            </div>
+            <div class="container-digital">
+                <h2 class="hora-digital">...</h2>
+                <img src="" alt="" class="imagem">
+            </div>
         </section>  
     </main>
 
     <footer>
         <p>&copy; Leandropek</p>
     </footer>
-    <script src="js/script.js"></script> 
-    <script src="js/script1.js"></script>   
+    <script src="js/script.js"></script>    
 </body>
 </html>
