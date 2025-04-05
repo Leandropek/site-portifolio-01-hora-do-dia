@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto interativo que exibe data e hora com mudanças dinâmicas de aparência.">
+    <meta name="author" content="Leandropek">
     <title>Relógio interativo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <link rel="stylesheet" href="assets/style/index.css">
 </head>
 <body>
-    <header class="cabecalho">
+    <header class="cabecalho" role="banner">
         <div class="texto__cabecalho">
             <h1>Relógio interativo</h1>
             <p>Verifique a hora atual sem esforço</p>
-            <a href="#info">Ver serviços</a>
+            <a href="#info" aria-label="Ir para a seção de informações">Ver serviços</a>
         </div>        
     </header>
 
-    <main>
-        <div class="info" id="info">
-            <h2 class="info-titulo"><i class="ri-calendar-2-line"></i>Data:</h2>            
+    <main role="main">
+        <section class="info" id="info" aria-labelledby="info-titulo">
+            <h2 class="info-titulo" id="info-titulo"><i class="ri-calendar-2-line"></i>Data:</h2>            
             <p class="info-texto">...</p>
-        </div>
+        </section>
 
-        <section class="section" >
+        <section class="section" aria-labelledby="analogico-titulo">
+            <h2 id="analogico-titulo"><i class="ri-time-line"></i>Relógio Analógico</h2>
             <div class="relogio__analogico-texto">
-                <h2><i class="ri-time-line"></i>Relógio Analógico</h2>
                 <p>O relógio analógico é um dispositivo clássico  mostrador circular e ponteiros que se movem em torno de um eixo central. Geralmente, possui três ponteiros principais:</p>
 
                 <ol>
@@ -44,9 +46,9 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" aria-labelledby="digital-titulo">
+            <h2 id="digital-titulo"><i class="ri-hourglass-line"></i>Relógio Digital</h2>
             <div class="relogio__digital-texto">
-                <h2><i class="ri-hourglass-line"></i>Relógio Digital</h2>
                 <p>O relógio digital é um dispositivo moderno que utiliza números para exibir o horário de forma direta e precisa. Geralmente, possui três caracteristicas principais:</p>
 
                 <ol>
@@ -62,7 +64,7 @@
         </section>  
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <p>&copy; Leandropek</p>
     </footer>
     <script src="js/script.js"></script>    

@@ -36,3 +36,7 @@ Este projeto exibe a data atual e atualiza dinamicamente o horário na página, 
 - Adicionar suporte para diferentes idiomas.
 - Implementar testes automatizados para validação da lógica.
 - Permitir personalização de temas pelo usuário.
+
+## Capturas de Tela
+### Página Inicial
+![Página Inicial](assets/img/exemplo.jpg)

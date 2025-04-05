@@ -13,6 +13,19 @@
     color: #000;
 }
 
+:focus {
+    outline: 2px solid #c50202;
+    outline-offset: 2px;
+}
+
+a {
+    transition: transform 0.3s ease-in-out;
+}
+
+a:focus, a:hover {
+    transform: scale(1.1);
+}
+
 body {
     transition: background 0.5s ease-in-out;
 }
