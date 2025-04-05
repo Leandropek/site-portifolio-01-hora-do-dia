@@ -56,28 +56,30 @@ document.addEventListener("DOMContentLoaded", () => {
 const titulo = document.querySelector(".hora-digital");
 const imagem = document.querySelector(".imagem");
 
-function atualizar() {
+function atualizarFundoEImagem(hora) {
+    if (hora < 12) { 
+        imagem.src = "assets/img/dia.jpg";
+        imagem.alt = "Imagem representando o dia";
+        document.body.style.background = "#94d8f5";
+    } else if (hora < 18) {
+        imagem.src = "assets/img/tarde.jpg";
+        imagem.alt = "Imagem representando a tarde";
+        document.body.style.background = "#F3C776";
+    } else {
+        imagem.src = "assets/img/noite.jpg";
+        imagem.alt = "Imagem representando a noite";
+        document.body.style.background = "#1D3044";
+    }
+}
 
+function atualizar() {
     const data = new Date();
     const hora = String(data.getHours()).padStart(2, '0'); 
     const minutos = String(data.getMinutes()).padStart(2, '0');
     const segundos = String(data.getSeconds()).padStart(2, '0');
 
     titulo.innerText = `${hora}:${minutos}:${segundos}`;
-
-    if (hora < 12) { 
-        imagem.src = "assets/img/dia.jpg";
-        imagem.alt = "Dia";
-        document.body.style.background = "#94d8f5";
-    } else if (hora < 18) {
-        imagem.src = "assets/img/tarde.jpg";
-        imagem.alt = "Tarde";
-        document.body.style.background = "#F3C776";
-    } else {
-        imagem.src = "assets/img/noite.jpg";
-        imagem.alt = "Noite";
-        document.body.style.background = "#1D3044";
-    }
+    atualizarFundoEImagem(hora);
 }
 
 atualizar();

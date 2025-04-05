@@ -13,6 +13,10 @@
     color: #000;
 }
 
+body {
+    transition: background 0.5s ease-in-out;
+}
+
 main {
     margin: 0 4em;
 }
