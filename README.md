@@ -1,26 +1,38 @@
-# Exibição de Data e Hora com Atualização Dinâmica
+# Exibição Dinâmica de Data e Hora
 
-Este projeto exibe a data atual e atualiza dinamicamente o horário na página, alterando a aparência com base no período do dia.
+Este projeto exibe a data atual e atualiza dinamicamente o horário na página, ajustando a aparência com base no período do dia.
 
 ## Funcionalidades
 
 ### Exibição da Data Atual
-- Mostra a data atual no formato detalhado:  
+- Mostra a data atual em um formato detalhado, como:  
   **"Manhã de Segunda-feira, 08 de janeiro de 2025."**
-- O período do dia é determinado com base no horário:
+- Determina o período do dia com base no horário:
   - **Manhã:** 6h às 11h59
   - **Tarde:** 12h às 17h59
   - **Noite:** 18h às 5h59
-- A data é inserida automaticamente em um elemento com a classe `.info-texto` no momento em que a página é carregada.
+- Insere automaticamente a data em um elemento com a classe `.info-texto` ao carregar a página.
 
 ### Atualização Dinâmica do Horário
-- Exibe o horário atual no formato **HH:MM:SS**, atualizando a cada segundo.
-- A aparência da página muda dinamicamente com base no período do dia:
-  - **Manhã:** Exibe uma imagem e altera o fundo para um tom azul claro.
-  - **Tarde:** Exibe uma imagem e altera o fundo para um tom alaranjado.
-  - **Noite:** Exibe uma imagem e altera o fundo para um tom azul escuro.
+- Exibe o horário atual no formato **HH:MM:SS**, com atualização a cada segundo.
+- Ajusta dinamicamente a aparência da página com base no período do dia:
+  - **Manhã:** Mostra uma imagem e altera o fundo para um tom azul claro.
+  - **Tarde:** Mostra uma imagem e altera o fundo para um tom alaranjado.
+  - **Noite:** Mostra uma imagem e altera o fundo para um tom azul escuro.
 
 ## Tecnologias Utilizadas
-- **HTML:** Estrutura da página.
-- **CSS:** Estilização e mudança dinâmica do fundo.
-- **JavaScript:** Lógica de exibição de data, hora e manipulação do DOM.
+- **HTML:** Estruturação da página.
+- **CSS:** Estilização e mudanças dinâmicas no fundo.
+- **JavaScript:** Lógica para exibição de data, hora e manipulação do DOM.
+
+## Como Executar o Projeto
+1. Clone este repositório:
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   ```
+2. Abra o arquivo `index.html` em um navegador.
+
+## Melhorias Futuras
+- Adicionar suporte para diferentes idiomas.
+- Implementar testes automatizados para validação da lógica.
+- Permitir personalização de temas pelo usuário.
