@@ -1,0 +1,86 @@
+/* assets/style/formulario.css */
+
+.formulario-contato-container {
+    background-color: #1A1A1A; /* Preto suave */
+    padding: 2em;
+    margin-top: 3em; /* Adicionado mais margem para separar do footer existente */
+    border-radius: 8px;
+    color: #f0f0f0; /* Cor de texto base mais clara */
+}
+
+.formulario-contato-container h3 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-family: var(--font-family-titulo);
+    font-size: 2em; /* Tamanho do título do formulário */
+    color: #fff; /* Garante que o título seja branco */
+}
+
+#contatoForm div {
+    margin-bottom: 1.2em; /* Aumentado um pouco o espaço entre campos */
+}
+
+#contatoForm label {
+    display: block;
+    margin-bottom: 0.6em; /* Aumentado um pouco o espaço label/input */
+    font-weight: bold;
+    font-family: var(--font-family-texto);
+    font-size: 0.95em; /* Tamanho da label */
+}
+
+#contatoForm input[type="text"],
+#contatoForm input[type="email"],
+#contatoForm textarea {
+    width: 100%;
+    padding: 0.9em; /* Aumentado padding interno dos campos */
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: var(--font-family-texto);
+    font-size: 1em; /* Tamanho da fonte nos campos */
+}
+
+#contatoForm input[type="text"]:focus,
+#contatoForm input[type="email"]:focus,
+#contatoForm textarea:focus {
+    border-color: #c50202; /* Cor de destaque ao focar */
+    outline: none; /* Remove outline padrão para usar a borda */
+    box-shadow: 0 0 5px rgba(197, 2, 2, 0.5); /* Sombra de foco opcional */
+}
+
+#contatoForm textarea {
+    resize: vertical; /* Permite redimensionamento vertical da textarea */
+}
+
+#contatoForm button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.9em 1.5em; /* Aumentado padding do botão */
+    background-color: #c50202; /* Cor do CTA original */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-family-texto);
+    font-weight: bold;
+    font-size: 1.1em; /* Tamanho da fonte do botão */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adicionada transição de transform */
+}
+
+#contatoForm button[type="submit"]:hover,
+#contatoForm button[type="submit"]:focus {
+    background-color: #d51d1d; /* Escurece no hover/focus */
+    transform: translateY(-2px); /* Leve efeito de elevação */
+    outline: none;
+}
+
+/* Ajustes para o footer original para melhor harmonia com o formulário */
+footer > p { /* Seleciona o <p> diretamente filho do footer */
+    background-color: #111; /* Fundo escuro também para o copyright */
+    color: #ccc; /* Cor do texto do copyright */
+    padding: 1.5em; /* Padding para o copyright */
+    margin-top: 0; /* Remove margem superior se o formulário estiver acima */
+    text-align: center;
+}
