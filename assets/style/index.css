@@ -1,6 +1,7 @@
 @import url("cabecalho.css");
 @import url("momento.css");
 @import url("secao.css");
+@import url("formulario.css"); /* Nova importação */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AU+SA:wght@100..400&display=swap');
 
