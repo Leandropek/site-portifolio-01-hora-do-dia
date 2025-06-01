@@ -1,25 +1,38 @@
 .cabecalho {
     background-image: url("../img/relogio.webp");
-    padding: 10rem 0;
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
     align-items: center;
-    padding:  10rem 0 ;
+    padding: 10rem 0;
     display: flex;
-    justify-content:flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.cabecalho::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
 }
 
 .texto__cabecalho {
-    text-align: center;      
+    text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .texto__cabecalho h1 {
     color: #fff;
     font-family: var(--font-family-titulo);
-    font-size: 7em;
+    font-size: 6em; /* Alterado de 7em para 6em */
     font-weight: 900;
-    text-shadow: 10px 10px 2px #000;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Reduzido o text-shadow */
 }
 
 .texto__cabecalho p {
@@ -28,27 +41,55 @@
     font-size: 1.5em;
     padding: 1em 0;
     font-weight: 500;
-    text-shadow: 2px 2px 1px #000;
+    text-shadow: none; /* Removido o text-shadow */
 }
 
 .texto__cabecalho a {
     display: inline-block;
     color: #fff;
-    background: #c50202;
+    background: transparent; /* Alterado para transparent */
     font-family: var(--font-family-texto);
     font-weight: 600;
     text-decoration: none;
     font-size: 1em;
-    padding: 1em 2em;
+    padding: 0.8em 1.8em; /* Ajustado o padding */
     border-radius: 8px;    
-    box-shadow: 1px 1px 1px 1px #000;
-    text-shadow: 1px 1px 1px #000;
+    border: 2px solid #fff; /* Adicionada a borda */
+    box-shadow: none; /* Removido o box-shadow */
+    text-shadow: none; /* Removido o text-shadow */
 }
 
 .texto__cabecalho a:hover {
-    background: #d51d1d;
-    box-shadow: 1px 1px 8px 4px #f79c9c;
+    background: #fff; /* Alterado o background no hover */
+    color: #c50202; /* Alterada a cor do texto no hover */
+    box-shadow: none; /* Removido o box-shadow no hover */
     transform: scale(1.1);
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.texto__cabecalho h1,
+.texto__cabecalho p,
+.texto__cabecalho a {
+    opacity: 0; /* Inicia invisível */
+    animation: fadeInText 0.8s ease-out forwards;
+}
+
+.texto__cabecalho p {
+    animation-delay: 0.2s; /* Atraso para o parágrafo */
+}
+
+.texto__cabecalho a {
+    animation-delay: 0.4s; /* Atraso para o botão */
 }
 
 @media (max-width: 1000px) {
@@ -56,24 +97,26 @@
     .cabecalho {
         background-image: url("../img/relogio1.png");
         background-size: contain;
-        padding:  4rem 50% ;
+        padding:  4rem 0; /* Ajustado o padding para telas menores e removido o padding lateral excessivo */
         background-attachment: scroll;
         justify-content: center;
+        /* A sobreposição ::before já deve funcionar bem aqui */
     }
 
     .texto__cabecalho h1 {
-        font-size: 4em; 
-        text-shadow: 5px 5px 1px #000;
-        line-height: 1.5em; 
+        font-size: 3.5em; /* Ajustado o font-size para telas menores */
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Mantido o text-shadow suave */
+        line-height: 1.2em; /* Ajustado o line-height */
     }
 
     .texto__cabecalho p {
-        font-size: 1.2em; 
+        font-size: 1.1em; /* Ajustado o font-size para telas menores */
         padding: 0.5em 0; 
     }
 
     .texto__cabecalho a {
         font-size: 0.9em; 
-        padding: 0.8em 1.5em; 
+        padding: 0.7em 1.6em; /* Ajustado o padding para o botão fantasma */
+        /* A borda já está definida, deve funcionar bem */
     }
 }
